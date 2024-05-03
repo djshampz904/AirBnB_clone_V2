@@ -21,7 +21,7 @@ ubuntu@89-web-01:~/$ curl localhost/hbnb_static/index.html
   <body>
     Holberton School
   </body>
-</html>" > /data/web_static/releases/test/index.html
+</html>"  | sudo tee /data/web_static/releases/test/index.html > /dev/null
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 sudo chown -R ubuntu /data/
