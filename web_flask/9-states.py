@@ -1,13 +1,13 @@
 #!/usr/bin/python3
+""" states by city more and id """
 from models import storage
 from models.state import State
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/states", strict_slashes=False)
-
-
 def states():
     """ Display a HTML page: (inside the tag BODY) """
     states = storage.all(State)
@@ -15,8 +15,6 @@ def states():
 
 
 @app.route("/states/<id>", strict_slashes=False)
-
-
 def states_id(id):
     """ Display a HTML page: (inside the tag BODY) """
     states = storage.all(State)
